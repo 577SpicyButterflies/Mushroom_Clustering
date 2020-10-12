@@ -1,0 +1,16 @@
+Description:
+ There are two file of Clustering. The first file was clustering implemented from scrath while in the seond file I take advantage of existing library.
+
+result:
+ In my own code, the error rate of clustering fluctuates around 35%. It is not stable because each time it choose random example as initial points. However,
+ 35% error rate was close enough to the result from clustering of using library. Hence, they meet at a conclusion that this dataset doesn't show potential to 
+ be classified through K-mean clustering. 
+
+Intepretation of the result:
+ There are following reasons why this data is not good for K-mean clustering:
+  (1): It only have two classes, so that even if we choose larger initial cluster number, it will collapse to two after the first iteration when it start to find mean point
+  of each classes. Therefore, unless the data was well polarized, it is hard to cluster them into two group without massive pruning.
+  (2): All attributes are nominal, and Nominal attributes doesn't offer meaningful knowledge about distance. For instance, we have four value for cap-shape, namely "x,s, b, f".
+  the distance between them should be mutually equivalent. Yet if we replace them with following rules "x->0 , s->1, b->2, f->3" and well normalized them. The distance between
+  "x" and "f" would be greater than the distance between "x" and "s". Hence when calculation of distance get involved, it is more possible for appearance of high error rate. 
+  
