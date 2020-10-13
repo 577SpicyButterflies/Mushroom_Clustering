@@ -38,7 +38,7 @@ for col in range(23):
 #   randomize order of instances
 #
 
-##shrooms = shrooms.sample(frac = 1) 
+shrooms = shrooms.sample(frac = 1) 
 
 #
 #   split data into training and testing sets, then fit onto DT
